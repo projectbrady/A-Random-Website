@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgb(121, 123, 226), transparent 40%),
+    linear-gradient(135deg, #4066b9, #8d17fc);
+}
+
+.main-container {
+  width: 420px;
+  padding: 45px;
+  background: #6f74df;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(175, 2, 255, 0.25);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form.hidden {
+  display: none;
+}
+
+.form h1 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+}
+
+.form label {
+  color: white;
+  font-weight: 600;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(94, 84, 238, 0.15);
+}
+
+.form input[type="submit"] {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgb(117, 24, 194), rgb(46, 32, 235));
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(96, 97, 177, 0.5);
+}
+
+.switch-text {
+  text-align: center;
+  color: #b2c2fa;
+  font-size: 13px;
+}
+
+.switch-text a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  color: rgb(78, 168, 228);
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 45px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.toggle-password:hover {
+  color: rgb(78, 168, 228);
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ffcccc;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+}
