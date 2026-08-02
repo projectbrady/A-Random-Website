@@ -3,70 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>LOGIN NOW</title>
+
+    <title>Login</title>
   </head>
+
   <body>
     <div class="main-container" id="main-container">
+      <!-- Login Form -->
       <form action="#" class="form" id="login">
         <h1>Log In</h1>
-        <!-- Log In Form -->
-        <label for="email" required></label>
+
+        <label for="login-email">Email</label>
         <input
-          type="emaillog"
-          id="emaillog"
-          name="emaillog"
+          type="email"
+          id="login-email"
+          name="login-email"
           placeholder="John.Doe@email.com"
+          required
         />
-        <label for="password" required> </label>
+
+        <label for="login-password">Password</label>
         <input
           type="password"
-          id="psword"
-          name="psword"
+          id="login-password"
+          name="login-password"
           placeholder="**********"
+          required
         />
 
         <input type="submit" value="Log In" />
+
+        <span id="log_in_text">
+          Don't have an account?
+          <a class="form_toggle" href="#">Create One!</a>
+        </span>
       </form>
+
+      <!-- Sign Up Form -->
       <form action="#" class="form" id="signup">
-        <h1>Create Accout</h1>
-        <!-- Sign Up Form -->
-        <label for="fname" required></label>
+        <h1>Create Account</h1>
+
+        <label for="first-name">First Name</label>
         <input
           type="text"
-          id="fname"
-          name="fname"
+          id="first-name"
+          name="first-name"
           placeholder="First Name..."
+          required
         />
 
-        <label for="lname" required></label>
-        <input type="text" id="lname" name="lname" placeholder="Last Name..." />
+        <label for="last-name">Last Name</label>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+          placeholder="Last Name..."
+          required
+        />
 
-        <label for="email" required></label>
+        <label for="signup-email">Email</label>
         <input
           type="email"
-          id="email"
-          name="email"
+          id="signup-email"
+          name="signup-email"
           placeholder="John.Doe@email.com"
+          required
         />
 
-        <label for="password" required> </label>
+        <label for="signup-password">Password</label>
         <input
           type="password"
-          id="psword"
-          name="psword"
+          id="signup-password"
+          name="signup-password"
           placeholder="**********"
+          required
         />
 
         <input type="submit" value="Sign Up" />
+        <span id="sign_in_text">
+          Already have an account?
+          <a class="form_toggle" href="#">Log In!</a>
+        </span>
       </form>
     </div>
+
+    <script src="script.js"></script>
   </body>
-  <style src="script.js"></style>
 </html>

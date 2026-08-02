@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "inter", sans-serif;
+  font-family: "Inter", sans-serif;
 
   background:
     radial-gradient(circle at top left, rgb(121, 123, 226), transparent 40%),
@@ -18,7 +18,7 @@ body {
 .main-container {
   width: 420px;
   padding: 45px;
-  background-color: rgba(0, 255, 234, 0.12);
+  background-color: #6f74df;
   backdrop-filter: blur(15px);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -31,10 +31,6 @@ body {
   gap: 18px;
 }
 
-#login {
-  display: none;
-}
-
 .form h1 {
   margin: 0 0 20px;
   text-align: center;
@@ -45,6 +41,7 @@ body {
 }
 
 .form label {
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: -10px;
@@ -65,7 +62,7 @@ body {
 }
 
 .form input:focus {
-  background: white;
+  background: #ffffff;
   box-shadow: 0 0 0 4px rgba(94, 84, 238, 0.15);
 }
 
@@ -75,17 +72,48 @@ body {
   border: none;
   border-radius: 12px;
   background: linear-gradient(135deg, rgb(117, 24, 194), rgb(46, 32, 235));
-  color: white;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
   transition:
     transform 0.2s,
-    box-shadow,
-    0.2s;
+    box-shadow 0.2s;
 }
 
 .form input[type="submit"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(96, 97, 177, 0.5);
+}
+
+#log_in_text,
+#sign_in_text {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #b2c2fa;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+#log_in_text a,
+#sign_in_text a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#log_in_text a:hover,
+#sign_in_text a:hover {
+  color: rgb(78, 168, 228);
+}
+
+#login {
+  display: flex;
+}
+
+#signup {
+  display: none;
 }
