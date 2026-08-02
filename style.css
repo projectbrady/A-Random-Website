@@ -18,7 +18,7 @@ body {
 .main-container {
   width: 420px;
   padding: 45px;
-  background: #6f74df;
+  background: rgba(111, 116, 223, 0.75);
   backdrop-filter: blur(15px);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -129,4 +129,60 @@ body {
   border-radius: 8px;
   text-align: center;
   font-size: 14px;
+}
+
+.home_container {
+  width: 420px;
+  padding: 45px 40px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+  color: white;
+
+  animation: fadeIn 0.5s ease;
+}
+
+.home_container h1 {
+  margin: 0 0 30px;
+  font-size: 32px;
+  color: white;
+}
+
+.home_container h1 span {
+  display: block;
+  margin-top: 12px;
+
+  color: #d8b4fe;
+  font-size: 36px;
+}
+
+.home_container button {
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #7518c2, #2e20eb);
+
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.home_container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(117, 24, 194, 0.5);
 }

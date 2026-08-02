@@ -17,8 +17,11 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main_conainer"> 
-        <h1>Welcome, <span><?= $_SESSION['first_name'] . " " . $_SESSION['last_name']; ?></span></h1>
+    <div class="home_container"> 
+        <h1>
+        Welcome back,
+        <span><?= $_SESSION['first_name'] . " " . $_SESSION['last_name']; ?></span>
+        </h1>
         <button onclick="window.location.href='logout.php'">Logout</button>
     </div>
 </body>
