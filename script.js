@@ -5,24 +5,24 @@ const toggles = document.querySelectorAll(".form-toggle");
 const passwordIcons = document.querySelectorAll(".toggle-password");
 
 toggles.forEach((toggle) => {
-  toggle.addEventListener("click", (event) => {
+  toggle.onclick = (event) => {
     event.preventDefault();
 
     login.classList.toggle("hidden");
     signup.classList.toggle("hidden");
-  });
+  };
 });
 
 passwordIcons.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    const input = icon.previousElementSibling;
+  icon.onclick = () => {
+    const passwordInput = icon.previousElementSibling;
 
-    if (input.type === "password") {
-      input.type = "text";
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
       icon.classList.replace("fa-eye", "fa-eye-slash");
     } else {
-      input.type = "password";
+      passwordInput.type = "password";
       icon.classList.replace("fa-eye-slash", "fa-eye");
     }
-  });
+  };
 });
