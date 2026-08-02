@@ -8,92 +8,79 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
     <title>Login</title>
   </head>
 
   <body>
-    <div class="main-container" id="main-container">
-      <!-- Login Form -->
-      <form action="#" class="form" id="login">
-        <h1>Log In</h1>
+    <div class="main-container">
+      <div class="form-wrapper">
+        <form class="form" id="login">
+          <h1>Log In</h1>
 
-        <label for="login-email">Email</label>
-        <input
-          type="email"
-          id="login-email"
-          name="login-email"
-          placeholder="John.Doe@email.com"
-          required
-        />
+          <label>Email</label>
+          <input type="email" placeholder="John.Doe@email.com" required />
 
-        <label for="login-password">Password</label>
-        <input
-          type="password"
-          id="login-password"
-          name="login-password"
-          placeholder="**********"
-          required
-        />
+          <label>Password</label>
+          <div class="password-container">
+            <input
+              class="password-input"
+              type="password"
+              placeholder="********"
+              required
+            />
+            <i class="fa-solid fa-eye fa-fw toggle-password"></i>
+          </div>
 
-        <input type="submit" value="Log In" />
+          <input type="submit" value="Log In" />
 
-        <span id="log_in_text">
-          Don't have an account?
-          <a class="form_toggle" href="#">Create One!</a>
-        </span>
-      </form>
+          <span class="switch-text">
+            Don't have an account?
+            <a href="#" class="form-toggle">Create One!</a>
+          </span>
+        </form>
 
-      <!-- Sign Up Form -->
-      <form action="#" class="form" id="signup">
-        <h1>Create Account</h1>
+        <form class="form hidden" id="signup">
+          <h1>Create Account</h1>
 
-        <label for="first-name">First Name</label>
-        <input
-          type="text"
-          id="first-name"
-          name="first-name"
-          placeholder="First Name..."
-          required
-        />
+          <label>First Name</label>
+          <input type="text" placeholder="First Name..." required />
 
-        <label for="last-name">Last Name</label>
-        <input
-          type="text"
-          id="last-name"
-          name="last-name"
-          placeholder="Last Name..."
-          required
-        />
+          <label>Last Name</label>
+          <input type="text" placeholder="Last Name..." required />
 
-        <label for="signup-email">Email</label>
-        <input
-          type="email"
-          id="signup-email"
-          name="signup-email"
-          placeholder="John.Doe@email.com"
-          required
-        />
+          <label>Email</label>
+          <input type="email" placeholder="John.Doe@email.com" required />
 
-        <label for="signup-password">Password</label>
-        <input
-          type="password"
-          id="signup-password"
-          name="signup-password"
-          placeholder="**********"
-          required
-        />
+          <label>Password</label>
+          <div class="password-container">
+            <input
+              class="password-input"
+              type="password"
+              placeholder="********"
+              required
+            />
+            <i class="fa-solid fa-eye fa-fw toggle-password"></i>
+          </div>
 
-        <input type="submit" value="Sign Up" />
-        <span id="sign_in_text">
-          Already have an account?
-          <a class="form_toggle" href="#">Log In!</a>
-        </span>
-      </form>
+          <input type="submit" value="Sign Up" />
+
+          <span class="switch-text">
+            Already have an account?
+            <a href="#" class="form-toggle">Log In!</a>
+          </span>
+        </form>
+      </div>
     </div>
 
     <script src="script.js"></script>

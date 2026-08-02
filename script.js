@@ -1,17 +1,28 @@
-let signUp = document.getElementById("signup");
-let logIn = document.getElementById("login");
-let formToggle = document.getElementsByClassName("form_toggle");
+const login = document.getElementById("login");
+const signup = document.getElementById("signup");
 
-for (let i = 0; i < formToggle.length; i++) {
-  formToggle[i].onclick = (event) => {
+const toggles = document.querySelectorAll(".form-toggle");
+const passwordIcons = document.querySelectorAll(".toggle-password");
+
+toggles.forEach((toggle) => {
+  toggle.onclick = (event) => {
     event.preventDefault();
 
-    if (getComputedStyle(logIn).display !== "none") {
-      logIn.style.display = "none";
-      signUp.style.display = "flex";
+    login.classList.toggle("hidden");
+    signup.classList.toggle("hidden");
+  };
+});
+
+passwordIcons.forEach((icon) => {
+  icon.onclick = () => {
+    const passwordInput = icon.previousElementSibling;
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      icon.classList.replace("fa-eye", "fa-eye-slash");
     } else {
-      signUp.style.display = "none";
-      logIn.style.display = "flex";
+      passwordInput.type = "password";
+      icon.classList.replace("fa-eye-slash", "fa-eye");
     }
   };
-}
+});

@@ -18,7 +18,7 @@ body {
 .main-container {
   width: 420px;
   padding: 45px;
-  background-color: #6f74df;
+  background: #6f74df;
   backdrop-filter: blur(15px);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -29,20 +29,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  opacity: 1;
+}
+
+.form.hidden {
+  display: none;
 }
 
 .form h1 {
   margin: 0 0 20px;
   text-align: center;
   font-size: 32px;
-  font-weight: 700;
-  color: #f8f8f8;
-  letter-spacing: -1px;
+  color: white;
 }
 
 .form label {
-  color: #ffffff;
-  font-size: 0.9rem;
+  color: white;
   font-weight: 600;
   margin-bottom: -10px;
 }
@@ -52,33 +54,30 @@ body {
 .form input[type="password"] {
   width: 100%;
   padding: 15px 18px;
-  font-size: 15px;
   border: none;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.9);
-  outline: none;
-  transition: 0.25s;
-  color: #111827;
+  font-size: 15px;
+  background: white;
 }
 
 .form input:focus {
-  background: #ffffff;
+  outline: none;
   box-shadow: 0 0 0 4px rgba(94, 84, 238, 0.15);
 }
 
 .form input[type="submit"] {
-  margin-top: 10px;
   padding: 15px;
   border: none;
   border-radius: 12px;
+
   background: linear-gradient(135deg, rgb(117, 24, 194), rgb(46, 32, 235));
-  color: #ffffff;
+
+  color: white;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+
+  transition: 0.2s;
 }
 
 .form input[type="submit"]:hover {
@@ -86,34 +85,44 @@ body {
   box-shadow: 0 10px 25px rgba(96, 97, 177, 0.5);
 }
 
-#log_in_text,
-#sign_in_text {
-  display: block;
+.switch-text {
   text-align: center;
-  margin-top: 10px;
-  font-size: 13px;
   color: #b2c2fa;
-  margin-right: 10px;
-  font-weight: 500;
+  font-size: 13px;
 }
 
-#log_in_text a,
-#sign_in_text a {
-  color: #ffffff;
+.switch-text a {
+  color: white;
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-#log_in_text a:hover,
-#sign_in_text a:hover {
+.switch-text a:hover {
   color: rgb(78, 168, 228);
 }
 
-#login {
-  display: flex;
+.password-container {
+  position: relative;
 }
 
-#signup {
-  display: none;
+.password-container input {
+  padding-right: 45px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 20px;
+  text-align: center;
+
+  color: #777;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.toggle-password:hover {
+  color: rgb(78, 168, 228);
 }
